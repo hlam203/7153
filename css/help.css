@@ -204,7 +204,10 @@ a{
 }
 
 .f-contact a {
-    color: #fff!important;
+    color: #fff;
+}
+.f-contact a:hover{
+    color: #ff9222!important;   
 }
 ul{
     list-style: none;
