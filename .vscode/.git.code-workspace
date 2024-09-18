@@ -1,0 +1,25 @@
+{
+    "folders": [
+		{
+			"path": "../../.git"
+		},
+		{
+			"path": "../../assignmentjs"
+		},
+		{
+			"path": "../../java coban"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../xaydungweb1"
+		}
+	],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "landingpageboots",
+        "liveServer.settings.CustomBrowser": "chrome",
+        "liveServer.settings.donotShowInfoMsg": true,
+        "liveServer.settings.donotVerifyTags": true
+    }
+}
