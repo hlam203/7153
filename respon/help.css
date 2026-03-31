@@ -1,0 +1,191 @@
+/* --- RESET CƠ BẢN --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- CONTAINER CHÍNH --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- PHẦN FORM LIÊN HỆ --- */
+.contactsheet {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+}
+
+.contactsheet h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #273746;
+    font-size: 28px;
+}
+
+/* Sử dụng CSS Grid để chia cột cho Form */
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Mặc định 2 cột trên máy tính */
+    gap: 20px;
+}
+
+.contact input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.contact input:focus {
+    border-color: #5D6D7E;
+}
+
+/* Cho các ô dài chiếm trọn 2 cột */
+.Title, .Content, .Submit {
+    grid-column: span 2;
+}
+
+.Content {
+    height: 100px; /* Nội dung cần ô to hơn chút */
+}
+
+.Submit {
+    background-image: linear-gradient(to right, rgb(74, 74, 79), rgb(171, 171, 177));
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none !important;
+    transition: 0.3s ease;
+}
+
+.Submit:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* --- PHẦN FOOTER --- */
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cột trên máy tính */
+    gap: 30px;
+    background-color: #273746;
+    color: #EBEDEF;
+    padding: 40px 30px;
+    border-radius: 8px;
+}
+
+.footer img {
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+.footer h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #EBEDEF;
+}
+
+.footer p, .footer a, .f-contact span {
+    color: #BDC3C7;
+    text-decoration: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    display: block;
+    transition: 0.3s;
+}
+
+.footer a:hover {
+    color: #ffffff;
+    padding-left: 5px; /* Hiệu ứng thụt lề khi hover link */
+}
+
+.f-contact ul {
+    list-style: none;
+}
+
+.f-contact li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.f-contact i {
+    font-size: 18px;
+    margin-right: 15px;
+    color: rgb(171, 171, 177);
+}
+
+/* --- BẢN QUYỀN --- */
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+/* =========================================
+   RESPONSIVE CHO ĐIỆN THOẠI & MÁY TÍNH BẢNG 
+   ========================================= */
+
+/* Máy tính bảng (Tablet) - Kích thước màn hình dưới 992px */
+@media screen and (max-width: 992px) {
+    .footer {
+        grid-template-columns: repeat(2, 1fr); /* Đưa footer về 2 cột */
+    }
+}
+
+/* Điện thoại di động (Mobile) - Kích thước màn hình dưới 768px */
+@media screen and (max-width: 768px) {
+    .contact {
+        grid-template-columns: 1fr; /* Form chỉ còn 1 cột */
+    }
+    
+    .Title, .Content, .Submit {
+        grid-column: span 1; /* Hủy việc chiếm 2 cột ở trên mobile */
+    }
+
+    .footer {
+        grid-template-columns: 1fr; /* Footer xếp thành 1 cột dọc */
+        text-align: center;
+    }
+
+    .footer h3::after {
+        left: 50%;
+        transform: translateX(-50%); /* Căn giữa gạch chân của tiêu đề */
+    }
+
+    .f-contact li {
+        justify-content: center; /* Căn giữa thông tin liên hệ */
+    }
+    
+    .contactsheet {
+        padding: 20px;
+    }
+}
