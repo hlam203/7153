@@ -282,6 +282,7 @@ body{
     animation-duration: 1.5s;
     transition: 0.8s;
     position: relative;
+    overflow: hidden;
 }
 
 .jordan-card:hover{
