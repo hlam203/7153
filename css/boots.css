@@ -25,7 +25,7 @@ body{
 }
 
 .logo{
-    width: 25vh;
+    width: 15vh;
     position: absolute;
     transition: 0.9s;
     animation-name: down;
