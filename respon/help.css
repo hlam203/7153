@@ -1,191 +1,118 @@
-/* --- RESET CƠ BẢN --- */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+/* =========================================
+   STYLE CHO FOOTER (GIỐNG ẢNH THIẾT KẾ)
+   ========================================= */
 
-body {
-    background-color: #f5f6f8;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* --- CONTAINER CHÍNH --- */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* --- PHẦN FORM LIÊN HỆ --- */
-.contactsheet {
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    margin-bottom: 40px;
-}
-
-.contactsheet h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #273746;
-    font-size: 28px;
-}
-
-/* Sử dụng CSS Grid để chia cột cho Form */
-.contact {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Mặc định 2 cột trên máy tính */
-    gap: 20px;
-}
-
-.contact input {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    outline: none;
-    transition: border 0.3s ease;
-}
-
-.contact input:focus {
-    border-color: #5D6D7E;
-}
-
-/* Cho các ô dài chiếm trọn 2 cột */
-.Title, .Content, .Submit {
-    grid-column: span 2;
-}
-
-.Content {
-    height: 100px; /* Nội dung cần ô to hơn chút */
-}
-
-.Submit {
-    background-image: linear-gradient(to right, rgb(74, 74, 79), rgb(171, 171, 177));
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    border: none !important;
-    transition: 0.3s ease;
-}
-
-.Submit:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-/* --- PHẦN FOOTER --- */
 .footer {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 cột trên máy tính */
+    /* Cột 1 và 4 to hơn cột 2 và 3 để giống tỷ lệ trong ảnh */
+    grid-template-columns: 1.8fr 1fr 1fr 1.8fr; 
     gap: 30px;
-    background-color: #273746;
-    color: #EBEDEF;
-    padding: 40px 30px;
-    border-radius: 8px;
+    background-color: #31373d; /* Màu nền xám đậm */
+    color: #ffffff;
+    padding: 60px 5%; /* Căn lề trên dưới 60px, 2 bên 5% */
 }
 
-.footer img {
+.footer .column1 img {
     max-width: 150px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    /* Giả lập khung ảnh lỗi như trong hình, nếu ảnh hiện bình thường bạn có thể bỏ viền này đi */
+    border: 1px solid #777; 
 }
 
 .footer h3 {
     font-size: 18px;
-    margin-bottom: 20px;
-    position: relative;
-    padding-bottom: 10px;
+    margin-bottom: 25px;
+    color: #ffffff;
+    font-weight: 700;
 }
 
-.footer h3::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 50px;
-    height: 3px;
-    background-color: #EBEDEF;
-}
-
-.footer p, .footer a, .f-contact span {
-    color: #BDC3C7;
+.footer p, .footer a, .f-contact span a {
+    color: #cccccc; /* Chữ màu xám nhạt */
     text-decoration: none;
-    font-size: 15px;
-    margin-bottom: 10px;
+    font-size: 14px;
+    margin-bottom: 15px;
     display: block;
-    transition: 0.3s;
+    line-height: 1.6;
+    transition: 0.3s ease;
 }
 
 .footer a:hover {
-    color: #ffffff;
-    padding-left: 5px; /* Hiệu ứng thụt lề khi hover link */
+    color: #d66a2e; /* Đổi sang màu cam khi di chuột vào link */
 }
 
+/* --- Style cho danh sách liên hệ (Cột 4) --- */
 .f-contact ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .f-contact li {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
+/* Vòng tròn màu cam chứa Icon */
 .f-contact i {
-    font-size: 18px;
+    background-color: #ce5a2b; /* Màu nền cam */
+    color: #ffffff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%; /* Bo tròn 100% */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-right: 15px;
-    color: rgb(171, 171, 177);
+    font-size: 16px;
+    flex-shrink: 0; /* Giúp icon không bị méo khi chữ quá dài */
 }
 
-/* --- BẢN QUYỀN --- */
+/* --- Dải Bản Quyền (Copyright) --- */
 .copyright {
+    background-color: #ce5a2b; /* Màu nền cam đồng bộ với icon */
+    color: #ffffff;
     text-align: center;
-    margin-top: 20px;
-    color: #7f8c8d;
+    padding: 20px 10px;
+}
+
+.copyright p {
+    margin: 0;
     font-size: 14px;
+    color: #ffffff;
 }
 
 /* =========================================
-   RESPONSIVE CHO ĐIỆN THOẠI & MÁY TÍNH BẢNG 
+   RESPONSIVE (THÍCH ỨNG ĐIỆN THOẠI & TABLET)
    ========================================= */
 
-/* Máy tính bảng (Tablet) - Kích thước màn hình dưới 992px */
+/* Máy tính bảng (Tablet) - Kích thước dưới 992px */
 @media screen and (max-width: 992px) {
     .footer {
-        grid-template-columns: repeat(2, 1fr); /* Đưa footer về 2 cột */
+        /* Chuyển thành 2 cột đều nhau */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        padding: 50px 5%;
     }
 }
 
-/* Điện thoại di động (Mobile) - Kích thước màn hình dưới 768px */
+/* Điện thoại di động (Mobile) - Kích thước dưới 768px */
 @media screen and (max-width: 768px) {
-    .contact {
-        grid-template-columns: 1fr; /* Form chỉ còn 1 cột */
-    }
-    
-    .Title, .Content, .Submit {
-        grid-column: span 1; /* Hủy việc chiếm 2 cột ở trên mobile */
-    }
-
     .footer {
-        grid-template-columns: 1fr; /* Footer xếp thành 1 cột dọc */
-        text-align: center;
+        /* Chuyển thành 1 cột xếp dọc */
+        grid-template-columns: 1fr;
+        text-align: center; /* Căn giữa tất cả chữ */
+        padding: 40px 5%;
+        gap: 30px;
     }
 
-    .footer h3::after {
-        left: 50%;
-        transform: translateX(-50%); /* Căn giữa gạch chân của tiêu đề */
+    .footer .column1 img {
+        margin: 0 auto 20px auto; /* Căn giữa logo */
+        display: block;
     }
 
     .f-contact li {
-        justify-content: center; /* Căn giữa thông tin liên hệ */
-    }
-    
-    .contactsheet {
-        padding: 20px;
+        justify-content: center; /* Căn giữa cụm icon + chữ */
+        text-align: left;
     }
 }
